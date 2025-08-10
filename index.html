@@ -1,14 +1,139 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Northside Framing</title>
-    <link rel="stylesheet" href="/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Northside Framing</title>
+  <meta name="description"
+    content="Northside Framing in North Lyneham, Canberra, is a framing shop that specializes in custom framing and restoration of art and photographs.">
+
+  <meta property="og:title" content="Northside Framing">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://northsideframing.com">
+  <meta property="og:image" content="https://northsideframing.com/images/og-image.jpg">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <link rel="canonical" href="https://northsideframing.com" />
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+
+  <!-- Business Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://northsideframing.com#business",
+    "name": "Northside Framing",
+    "image": "https://northsideframing.com/img/logo_square.png",
+    "description": "Professional custom framing and art restoration services in North Lyneham, Canberra. Specializing in custom framing and restoration of art and photographs.",
+    "url": "https://northsideframing.com",
+    "telephone": "+61448070664",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2/7 Montford Cres",
+      "addressLocality": "Lyneham",
+      "addressRegion": "ACT",
+      "postalCode": "2602",
+      "addressCountry": "AU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -35.2446,
+      "longitude": 149.1242
+    },
+    "openingHours": [
+      "Mo-Fr 10:00-16:00",
+      "Sa 10:00-14:00"
+    ],
+    "priceRange": "$$",
+    "serviceArea": {
+      "@type": "City",
+      "name": "Canberra"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Framing Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Custom Picture Framing",
+            "description": "Professional custom framing for artwork, photographs, and memorabilia"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Art Restoration",
+            "description": "Expert restoration services for damaged or aging artwork and photographs"
+          }
+        }
+      ]
+    }
+  }
+  </script>
 </head>
+
 <body>
-    <main>
-        <p class="splash"><img src="/splash_logo.jpg"></p>
-    </main>
+
+  <main>
+
+    <div class="splash">
+      <h1 class="visually-hidden">Northside Framing</h1>
+      <p class="visually-hidden">Professional Custom Framing Services in Canberra</p>
+      <div class="title-banner mb-4"><img src="img/nf_title.png"></div>
+    </div>
+
+    <ul class="actions">
+
+      <li class="location">
+        <a href="https://maps.app.goo.gl/ENfRDaxztyWPm3YY7" target="_blank" rel="noopener"
+          aria-label="View location on Google Maps">
+          <span class="visually-hidden">Location: 2/7 Montford Cres, Lyneham, ACT 2602 - Opens in new window</span>
+        </a>
+      </li>
+
+      <li class="hours tile">
+        <h2 class="font-summer-multi">Opening Hours</h2>
+        <p><strong>Tuesday to Sunday</strong> <br>10:00am to 7:00pm</p>
+        <p><strong>Closed Saturday</strong></p>
+      </li>
+      <li class="call tile">
+        <h2 class="font-summer-multi">Contact</h2> <p><a href="tel:+610448070664"
+          aria-label="Call Northside Framing at 0448 070 664"><strong>0448 070 664</strong></a></p>
+        <h2 class="font-summer-multi">Address</h2> <a href="https://maps.app.goo.gl/ENfRDaxztyWPm3YY7" target="_blank"
+          rel="noopener" aria-label="View location on Google Maps">2/7 Montford Cres, Lyneham,
+          ACT 2602</a>
+      </li>
+      <li class="gallery"><a href="#" role="button" aria-label="Open photo gallery" id="gallery-trigger"><span
+            class="visually-hidden">Gallery - View our framing work</span></a></li>
+    </ul>
+
+  </main>
+
+  <!-- Gallery Modal -->
+  <div id="gallery-modal" class="gallery-modal" role="dialog" aria-labelledby="gallery-title" aria-modal="true">
+    <div class="gallery-content">
+      <h2 id="gallery-title" class="visually-hidden">Photo Gallery</h2>
+      <button class="gallery-close" aria-label="Close gallery" id="gallery-close">&times;</button>
+      <button class="gallery-nav gallery-prev" aria-label="Previous image" id="gallery-prev">&lsaquo;</button>
+      <img src="photos/1.jpeg" alt="Custom framing work sample" class="gallery-image" id="gallery-image">
+      <button class="gallery-nav gallery-next" aria-label="Next image" id="gallery-next">&rsaquo;</button>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script src="js/app.js"></script>
+
 </body>
+
 </html>

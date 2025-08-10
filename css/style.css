@@ -1,0 +1,754 @@
+/*! HTML5 Boilerplate v9.0.0-RC1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* Import modern font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+/* Custom font declarations for Summer Of 76 fonts */
+@font-face {
+  font-family: 'Summer Of 76 New Solid';
+  src: url('../fonts/SummerOf76-New-Solid.woff2') format('woff2'),
+       url('../fonts/SummerOf76-New-Solid.woff') format('woff'),
+       url('../fonts/SummerOf76-New-Solid.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Summer Of 76 Multi Line';
+  src: url('../fonts/SummerOf76-New.woff2') format('woff2'),
+       url('../fonts/SummerOf76-New.woff') format('woff'),
+       url('../fonts/SummerOf76-New.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* CSS Custom Properties for font families */
+:root {
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-summer-solid: 'Summer Of 76 New Solid', 'Arial Black', Impact, sans-serif;
+  --font-summer-multi: 'Summer Of 76 Multi Line', 'Arial Black', Impact, sans-serif;
+}
+
+/* Font utility classes */
+.font-summer-solid {
+  font-family: var(--font-summer-solid);
+}
+
+.font-summer-multi {
+  font-family: var(--font-summer-multi);
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+body {
+  background-color: #efefef;
+  font-family: var(--font-primary);
+  padding: 2rem 2rem;
+}
+
+.splash {
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+.title-banner img {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  max-width: 750px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.actions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.actions li {
+  width: 256px;
+  height: 256px;
+  border: 1px solid #CCC;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin: 0;
+  overflow: hidden;
+}
+
+.actions li.location {
+  display: flex;
+}
+
+.actions li.location a {
+  flex: 1;
+  display: block;
+  background-image: url(../img/map.png);
+  width: 100%;
+}
+
+.actions li a {
+  display: block;
+  text-decoration: none;
+  color: #FF2323;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.actions li a:focus {
+  outline: 3px solid #0066cc;
+  outline-offset: 2px;
+}
+
+/* Hours tile styling */
+.actions li.hours {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #FF2323;
+}
+
+/* .actions li.hours h2 {
+  font-family: var(--font-summer-solid);
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+} */
+
+/* Contact tile styling */
+.actions li.call {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #FF2323;
+}
+
+.actions li.call a h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.actions li.call a {
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* Gallery tile styling */
+.actions li.gallery {
+  display: flex;
+}
+.actions li.gallery a {
+  flex: 1;
+  position: relative;
+  cursor: pointer;
+  background-image: url(../img/artwork.jpg);
+}
+
+/* Modal overlay for gallery */
+.gallery-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.gallery-modal.active {
+  display: flex;
+}
+
+.gallery-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-image {
+  max-width: 100%;
+  max-height: 90vh;
+  height: auto;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  transition: all 0.2s ease;
+}
+
+.gallery-close:hover {
+  background: rgba(0, 0, 0, 0.95);
+  transform: scale(1.1);
+}
+
+.gallery-close:focus {
+  outline: 3px solid #0066cc;
+  outline-offset: 2px;
+}
+
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: none;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  transition: all 0.2s ease;
+}
+
+.gallery-nav:hover {
+  background: rgba(0, 0, 0, 0.95);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-nav:focus {
+  outline: 3px solid #0066cc;
+  outline-offset: 2px;
+}
+
+.gallery-prev {
+  left: 15px;
+}
+
+.gallery-next {
+  right: 15px;
+}
+
+/* Performance optimizations */
+.tile,
+.actions li a {
+  will-change: transform;
+}
+
+.gallery-image {
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* Loading states */
+.gallery-image[src=""] {
+  background: linear-gradient(90deg, #f0f0f0 25%, transparent 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Enhanced hover states for better UX */
+.actions li a:hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+/* Improved focus indicators for accessibility */
+.actions li a:focus {
+  outline: 3px solid #0066cc;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.8);
+}
+
+
+/* Reduced motion support for accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+  .actions li a,
+  .gallery-image,
+  .gallery-modal {
+    transition: none;
+    animation: none;
+  }
+
+  .actions li a:hover {
+    transform: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .actions li a {
+    border: 2px solid #000;
+  }
+
+  .actions li.hours a,
+  .actions li.call a {
+    background: #000 !important;
+    color: #fff !important;
+  }
+}
+
+/* Responsive design improvements */
+@media (max-width: 1200px) {
+  .actions {
+    flex-wrap: wrap;
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  main {
+    height: auto;
+    min-height: 100vh;
+    padding: 1rem 0;
+  }
+
+  .splash {
+    margin: 0 0 1.5rem 0;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: none;
+  }
+
+  .actions li {
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .actions li.hours,
+  .actions li.call {
+    padding: 1.5rem 1rem;
+  }
+
+  .actions li.hours h2,
+  .actions li.call h2 {
+    font-size: 1.1rem;
+  }
+
+  .gallery-content {
+    max-width: 95vw;
+    max-height: 85vh;
+    margin: 10px;
+  }
+
+  .gallery-nav {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .gallery-prev {
+    left: 10px;
+  }
+
+  .gallery-next {
+    right: 10px;
+  }
+
+  .gallery-close {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  .actions li {
+    height: 180px;
+    max-width: none;
+  }
+
+  .actions li.hours,
+  .actions li.call {
+    padding: 1rem 0.75rem;
+  }
+
+  .actions li.hours h2,
+  .actions li.call h2 {
+    font-size: 1rem;
+  }
+
+  .actions li.hours p,
+  .actions li.call p {
+    font-size: 0.9rem;
+  }
+
+  .gallery-content {
+    max-width: 98vw;
+    max-height: 80vh;
+    margin: 5px;
+  }
+
+  .gallery-nav {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+
+  .gallery-prev {
+    left: 5px;
+  }
+
+  .gallery-next {
+    right: 5px;
+  }
+
+  .gallery-close {
+    top: 5px;
+    right: 5px;
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+  .gallery-nav,
+  .gallery-close {
+    opacity: 0.9;
+    transform: none;
+  }
+
+  .gallery-nav:hover {
+    transform: translateY(-50%);
+  }
+
+  .gallery-nav:active,
+  .gallery-close:active {
+    transform: translateY(-50%) scale(0.95);
+  }
+
+  .gallery-close:active {
+    transform: scale(0.95);
+  }
+}
