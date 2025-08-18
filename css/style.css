@@ -325,7 +325,6 @@ main {
 }
 
 .actions li {
-  max-width: 256px;
   width: 256px;
   height: 256px;
   border: 1px solid #CCC;
@@ -636,8 +635,8 @@ main {
 
   .actions li {
     width: 100%;
-    max-width: 400px;
-    height: 200px;
+    max-width: 256px;
+    height: 256px;
     margin: 0 auto;
   }
 
@@ -686,8 +685,8 @@ main {
   }
 
   .actions li {
-    height: 180px;
-    max-width: none;
+    /* height: 180px;
+    max-width: none; */
   }
 
   .actions li.hours,
