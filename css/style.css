@@ -325,6 +325,7 @@ main {
 }
 
 .actions li {
+  max-width: 256px;
   width: 256px;
   height: 256px;
   border: 1px solid #CCC;
