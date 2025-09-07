@@ -41,6 +41,86 @@
                 src: 'photos/6.jpg',
                 alt: 'Custom frame designs and restoration examples',
                 title: 'Custom Design and Restoration'
+            },
+            {
+                src: 'photos/7.jpg',
+                alt: 'Additional custom framing work demonstrating professional quality',
+                title: 'Professional Framing Sample 7'
+            },
+            {
+                src: 'photos/8.jpg',
+                alt: 'Custom framing project showcasing artistic presentation',
+                title: 'Artistic Framing Display 8'
+            },
+            {
+                src: 'photos/9.jpg',
+                alt: 'Expert craftsmanship in frame selection and matting',
+                title: 'Expert Framing Craftsmanship 9'
+            },
+            {
+                src: 'photos/10.jpg',
+                alt: 'Professional framing work with detailed attention to presentation',
+                title: 'Professional Framing Sample 10'
+            },
+            {
+                src: 'photos/11.jpg',
+                alt: 'Custom framing techniques demonstrating quality workmanship',
+                title: 'Quality Custom Framing 11'
+            },
+            {
+                src: 'photos/12.jpg',
+                alt: 'Artistic framing project with professional finishing',
+                title: 'Artistic Framing Project 12'
+            },
+            {
+                src: 'photos/13.jpg',
+                alt: 'Custom frame design showcasing attention to detail',
+                title: 'Custom Frame Design 13'
+            },
+            {
+                src: 'photos/14.jpg',
+                alt: 'Professional framing work with expert matting selection',
+                title: 'Expert Matting and Framing 14'
+            },
+            {
+                src: 'photos/15.jpg',
+                alt: 'Quality framing project demonstrating skilled craftsmanship',
+                title: 'Skilled Framing Craftsmanship 15'
+            },
+            {
+                src: 'photos/16.jpg',
+                alt: 'Custom framing work with professional presentation techniques',
+                title: 'Professional Presentation 16'
+            },
+            {
+                src: 'photos/17.jpg',
+                alt: 'Artistic framing project showcasing creative design solutions',
+                title: 'Creative Framing Solutions 17'
+            },
+            {
+                src: 'photos/18.jpg',
+                alt: 'Expert framing work demonstrating quality materials and techniques',
+                title: 'Quality Materials and Techniques 18'
+            },
+            {
+                src: 'photos/19.jpg',
+                alt: 'Professional custom framing with detailed craftsmanship',
+                title: 'Detailed Custom Framing 19'
+            },
+            {
+                src: 'photos/20.jpg',
+                alt: 'Custom framing project showing expert attention to detail',
+                title: 'Expert Detail Work 20'
+            },
+            {
+                src: 'photos/21.jpg',
+                alt: 'Professional framing work with artistic presentation',
+                title: 'Artistic Professional Framing 21'
+            },
+            {
+                src: 'photos/22.jpg',
+                alt: 'Custom framing sample demonstrating quality workmanship and design',
+                title: 'Quality Workmanship and Design 22'
             }
         ],
         
